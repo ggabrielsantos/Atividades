@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="nome_cam">
+    <input type="number" id="idade_cam">
+    <input type="text" id="resp" readonly>
+    <input type="button" value="Enviar" onclick="mensagem()">
+
+    <script>
+
+        function mensagem() {
+            
+            let cam_nm = document.getElementById("nome_cam").value;
+            let cam_idade = parseInt(document.getElementById("idade_cam").value);
+            var cam_resp = document.getElementById("resp");
+
+            if (cam_idade < 18) {
+                cam_resp.value = ("A idade de " + cam_nm + " é de " + cam_idade + " de menor!! ");
+            }else{
+                cam_resp.value = ("A idade de " + cam_nm + " é de " + cam_idade + " de maior!! ");
+            }
+
+
+        }
+
+    </script>
+
+</body>
+</html>

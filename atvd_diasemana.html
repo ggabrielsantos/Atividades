@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+var valor = parseInt(prompt("Valor de 1 ate 7: "));
+var dia = diadasemana(valor);
+
+function diadasemana(p1) {
+                
+                switch (p1) {
+                    case 1:
+                    resp = ("Domingo");
+                        break;
+
+                    case 2:
+                    resp = ("Segunda-Feira");
+                        break;
+
+                    case 3:
+                    resp = ("Terça-Feira");
+                        break;
+
+                    case 4:
+                    resp = ("Quarta-Feira");
+                        break;
+
+                    case 5:
+                    resp = ("Quinta-Feira");
+                        break;
+
+                    case 6:
+                    resp = ("Sexta-Feira");
+                        break;
+
+                    case 7:
+                    resp = ("Sabado");
+                        break;    
+                    default:
+                    alert("Numero invalido!!")
+
+                        break;
+                }
+
+
+                return resp;
+        }
+    
+    alert(dia);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+</head>
+<body>
+
+    <h1><b>Pedidos</b></h1>
+
+    <form>
+
+        <img src="img/bola.webp" width="300">
+        <p>Bola Penallty Proficional de Campo</p>
+        <p><b>Valor R$ 15,00</b></p>
+        <p >Quantidade:</p>
+        <input type="number" id="quantidade">
+        
+    
+
+    <br>
+    <br>
+
+    
+
+        <h3>Calcular Pedidos</h3>
+
+        <label for="prod_quant">Quantidade de produto 01: </label>
+        <input type="number" id="prod_quant"><br>
+
+        <label for="totalvalor">Total de produto 01: </label>
+        <input type="number" id="totalvalor"><br>
+
+        <input type="button" value="Fechar Pedido" onclick="fecha()">
+
+
+    </form>
+
+    <script>
+
+        function fecha() {
+            
+            let campo_daquant = document.getElementById("prod_quant")
+            let campo_dovalor = document.getElementById("totalvalor");
+            let totalquant = document.getElementById("quantidade");
+
+            campo_daquant.value = totalquant.value;
+            campo_dovalor.value = totalquant.value * 15,00;
+
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

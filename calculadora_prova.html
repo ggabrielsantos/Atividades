@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_calc2.css">
+    <title>Calculadora</title>
+</head>
+<body>
+
+                <div class="container">
+                    <div class="name">CALCULADORA DO GABRIEL</div>
+
+    
+                        <table align="center">
+
+                                <tr>
+                                    <td colspan="4"><input type="text" readonly id="tela"></td>
+                                </tr>
+                                <tr align="center">
+                                    <td><input type="button" value="7" onclick="nro('7')"></td>
+                                    <td><input type="button" value="8" onclick="nro('8')"></td>
+                                    <td><input type="button" value="9" onclick="nro('9')"></td>
+                                    <td><input type="button" value="+" onclick="soma()" class="operator"></td>
+                                </tr>
+
+                                <tr align="center">
+                                    <td><input type="button" value="4" onclick="nro('4')"></td>
+                                    <td><input type="button" value="5" onclick="nro('5')"></td>
+                                    <td><input type="button" value="6" onclick="nro('6')"></td>
+                                    <td><input type="button" value="-" onclick="sub()" class="operator"></td>
+                                </tr>
+
+                                <tr align="center">
+                                    <td><input type="button" value= "1" onclick="nro('1')"></td>
+                                    <td><input type="button" value="2" onclick="nro('2')"></td>
+                                    <td><input type="button" value="3" onclick="nro('3')"></td>
+                                    <td><input type="button" value="x" onclick="multi()" class="operator"></td>
+                                </tr>
+
+                                <tr align="center">
+                                    <td><input type="button" value="." onclick="nro('.')"></td>
+                                    <td><input type="button" value="0" onclick="nro('0')"></td>
+                                    <td><input type="button" value="ce" onclick="pag()" class="special"></td>
+                                    <td><input type="button" value=":" onclick="divi()" class="operator"></td>
+                                </tr>
+
+                                <tr align="center"> 
+                                    <td colspan="2"><input type="button" value="       bk       " onclick="back()" class="special"></td>
+                                    <td colspan="2"><input type="button" value="       =       " onclick="igual('=')" class="special"></td>
+                                </tr>
+
+                        </table>
+
+                </div>
+
+    <script>
+
+        var display = "";
+        var displayv = document.getElementById("tela");
+
+
+
+        function nro(p1) {
+            
+            if (displayv.value.length <= 19) {
+                
+                
+                switch (p1) {
+                    case "1":   
+                    displayv.value += "1";
+                    display += "1";
+                        break;
+
+                        case "2":   
+                    displayv.value += "2";
+                    display += "2";
+                        break;
+
+                        case "3":   
+                    displayv.value += "3";
+                    display += "3";
+                        break;
+
+                        case "4":   
+                    displayv.value += "4";
+                    display += "4";
+                        break;
+
+                        case "5":   
+                    displayv.value += "5";
+                    display += "5";
+                        break;
+
+                        case "6":   
+                    displayv.value += "6";
+                    display += "6";
+                        break;
+
+                        case "7":   
+                    displayv.value += "7";
+                    display += "7";
+                        break;
+
+                        case "8":   
+                    displayv.value += "8";
+                    display += "8";
+                        break;
+
+                        case "9":   
+                    displayv.value += "9";
+                    display += "9";
+                        break;
+
+                        case "0":   
+                    displayv.value += "0";
+                    display += "0";
+                        break;
+
+                        case ".":   
+                    displayv.value += ".";
+                    display += ".";
+                        break;
+
+                }
+
+            }   
+
+               
+            }
+
+            
+            function soma() {
+                display += "+";
+                displayv.value = "";
+            }
+
+            function sub() {
+                display += "-";
+                displayv.value = "";
+            }
+
+            function multi() {
+                display += "*";
+                displayv.value = "";
+            }
+
+            function divi() {
+                display += "/";
+                displayv.value = "";
+            }
+
+            function igual(){
+
+                let result = eval(display);
+
+                document.getElementById("tela").value = result;
+
+            }
+
+            function pag() {
+
+                display = "";
+                document.getElementById("tela").value = "";
+
+            }
+
+            function back(){
+                
+                display = display.slice(0,-1);
+                displayv.value = displayv.value.slice(0,-1);
+            }
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+</head>
+<body>
+
+    <form method="post" action="Aula_tres.html">
+        <P><h3>ALUNO</h3></p>
+            <p>
+            </p>
+        <p>
+            <label for="iNOME"> Nome:</label>
+            <input type="text" maxlength="100" id="iNOME" required>
+        </p>
+
+        <p>
+            <label for="iEMAIL"> Email:</label>
+            <input type="email" maxlength="80" id="iEMAIL" placeholder="seu@gmail.com">
+        </p>
+        
+        <p>
+            <label for="iDATA1"> Data de nascimento:</label>
+            <input type="date" maxlength="80" id="iDATA1">
+            <input type="time" id="iDATA2">
+            <input type="datetime-local" id="iDATA3">
+        </p>
+        
+        <p>
+            <label for="iNRO1"> Numero De Chamada:</label>
+            <input type="number" min="0" max="10" id="iNRO1">
+            <input type="number" step=".1" id="iNRO2">
+        </p>
+
+        <p>
+            <input type="checkbox" id="ATIVO">
+            <label for="ATIVO"> Aluno Ativo:</label>
+        </p>
+
+        <p>
+            <input type="radio" id="iMANHA" name="nTurno" value="M">
+            <label for="iMANHA"> Manhã:</label><br>
+            <input type="radio" id="iTARDE" name="nTurno" value="T">
+            <label for="iTARDE"> Tarde:</label><br>
+            <input type="radio" id="iNOITE" name="nTurno" value="N">
+            <label for="iNOITE"> Noite:</label><br>
+        </p>
+        
+        <p>
+            <label for="iSala">Sala: </label>
+            <select name="nSALA" id="iSala" required>
+                <!-- multiple para poder escolher mais de uma option por vez -->
+                <OPtion value="">Selecione...</OPtion>
+                <option value="A-01">A-01</option>
+                <option value="A-02">A-02</option>
+                <option value="B-01">B-01</option>
+                <option value="B-02">B-02</option>
+            </select>
+        </p>
+        
+        <p>
+            <label for="iObs">Observações: </label>
+            <textarea name="" id="iObs" cols="30" rows="10" placeholder="Me diga aqui..."></textarea>
+        </p>
+
+        <p>
+            <label for="iFoto">Foto do Aluno: </label>
+            <input type="file" id="iFoto" accept="image/*">
+        </p>
+
+        <p>
+            <input type="submit" value="Salvar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+
+    <a href="Aula_um.html">VOLTAR</a>   
+</body>
+</html>

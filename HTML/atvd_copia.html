@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+    <input type="text" id="primeiro_cam"><br>
+    <input type="text" id="segundo_cam" readonly><br>
+    <input type="button" value="copiar" onclick="ir_para()">
+    <input type="reset" value="Limpar" onclick="reset"><br>
+    </form>
+
+    <script>
+
+        function ir_para() {
+            
+            c1 = document.getElementById("primeiro_cam").value;
+            document.getElementById("segundo_cam").value = (c1);
+
+           
+        }
+
+    </script>
+
+</body>
+</html>

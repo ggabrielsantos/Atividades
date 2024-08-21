@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="style_calc.css" rel="stylesheet"> 
+</head>
+<body>
+
+   
+
+                                    CALCULADORA
+        <h1>Calculadora</h1>
+    
+        <input type="text" id="Valor1" placeholder="Digite o numero 01:">
+        <input type="text" id="Valor2" placeholder="Digite o numero 02:">
+    
+        <input type="button" id="som" value="+" onclick="soma()">
+        <input type="button" id="meno" value="-" onclick="menos()">
+        <input type="button" id="veze" value="x" onclick="vezes()">
+        <input type="button" id="divi" value=":" onclick="divid()">
+
+        <input type="text" id="retorno" >
+     
+        <input type="reset" id="Limpar" value="Limpar">
+        
+    
+    
+    </form> 
+
+    <!-- 
+                        TECLADO
+    <input type="text" readonly id="cam">
+    <input type="button" value="G" onclick="letras('G')">
+    <input type="button" value="A" onclick="letras('A')">
+    <input type="button" value="B" onclick="letras('B')">
+    <input type="button" value="R" onclick="letras('R')">
+    <input type="button" value="I" onclick="letras('I')">
+    <input type="button" value="E" onclick="letras('E')">
+    <input type="button" value="L" onclick="letras('L')"> -->
+
+
+    <script>
+
+
+        /*                      TECLADO
+
+        function letras(p1) {
+            
+            var campo = document.getElementById("cam");
+            var tx = campo.value;
+
+            switch (p1) {
+                case "G":
+                 tx = tx + "G"   
+                 campo.value = tx;
+                    break;
+
+                case "A":
+                 tx = tx + "A"   
+                 campo.value = tx;
+                    break;
+
+                case "B":
+                 tx = tx + "B"   
+                 campo.value = tx;
+                    break;
+
+                case "R":
+                 tx = tx + "R"   
+                 campo.value = tx;
+                    break;
+
+                case "I":
+                 tx = tx + "I"   
+                 campo.value = tx;
+                    break;
+
+                case "E":
+                 tx = tx + "E"   
+                 campo.value = tx;
+                    break;
+
+                case "L":
+                 tx = tx + "L"   
+                 campo.value = tx;
+                    break;
+            
+                default:
+                    break;
+            }
+
+        }  */
+
+    
+
+        
+        //                         CALCULADORA
+        
+        function soma () {
+        var nro1 = parseInt(document.getElementById("Valor1").value);
+        var nro2 = parseInt(document.getElementById("Valor2").value);
+        var igual = nro1 + nro2;
+
+        document.getElementById("retorno").value = igual;
+        }
+
+        function menos () {
+        var nro1 = parseInt(document.getElementById("Valor1").value);
+        var nro2 = parseInt(document.getElementById("Valor2").value);
+        var igual = nro1 - nro2;
+
+        document.getElementById("retorno").value = igual;
+        }
+
+        function vezes () {
+        var nro1 = parseInt(document.getElementById("Valor1").value);
+        var nro2 = parseInt(document.getElementById("Valor2").value);
+        var igual = nro1 * nro2;
+
+        document.getElementById("retorno").value = igual;
+        }
+
+        function divid () {
+        var nro1 = parseInt(document.getElementById("Valor1").value);
+        var nro2 = parseInt(document.getElementById("Valor2").value);
+        var igual = nro1 / nro2;
+
+        document.getElementById("retorno").value = igual;
+        }
+
+
+        
+
+    </script>
+
+</body>
+</html>

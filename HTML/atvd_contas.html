@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    <input type="number" id="valor1">
+    <input type="button" value="Resposta" onclick="envio()">
+    </p>
+    <p>
+    <b>Par ou Impar =</b> 
+    <input type="text" id="resp1">
+    <b>Metade =</b>
+    <input type="text" id="resp2">
+    <b>Dobro =</b>
+    <input type="text" id="resp3">
+    </p>
+
+    <script>
+
+        function envio() {
+
+                var nro = document.getElementById("valor1");
+
+                
+
+                if (nro.value % 2 <= 0 ) {
+                    document.getElementById("resp1").value = ("É par");
+                }else{
+                    document.getElementById("resp1").value = ("É impar");
+                }
+
+                document.getElementById("resp2").value = nro.value / 2;
+
+                document.getElementById("resp3").value = nro.value * 2;
+
+            
+        }
+        
+
+
+    </script>
+</body>
+</html>

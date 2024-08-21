@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nro1">
+    <input type="text" id="nro2">
+    <input type="button" id="resp" value="somar" onclick="calculo('+')">
+    <input type="text" id="camp_resp">
+
+    <script src="js/script.js"></script>
+
+    <script>  
+        function calculo(sinal) {
+        var n1 = document.getElementById('nro1').value;
+        var n2 = document.getElementById('nro2').value;
+
+        document.getElementById('camp_resp').value = calcular(n1,sinal,n2);
+        }
+    </script>
+</body>
+</html>

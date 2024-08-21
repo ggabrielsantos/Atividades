@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    /*var n = parseInt(prompt("A tabuada do..."));
+    
+    alert(tabuada(n));
+
+    function tabuada(p1) {
+        
+        var resp =""; 
+
+        for (let c = 1; c <= 10; c++) {
+
+            var tabu = p1 * c;
+            resp += + p1 + " x " + c + " = " + tabu + "\n"; 
+         
+        }
+
+        return resp;
+    }*/
+
+  /*var dis = parseInt(prompt("Me passe a distancia: "));
+    var litros = parseInt(prompt("Me passe a Litros: "));
+    var media_c = consumo(dis,litros);
+
+    function consumo(p1,p2) {
+        
+        consu = p1/p2;
+
+        return consu;
+
+    }
+
+    alert("A média de consumo é... " + media_c);*/
+
+    /*var largura = parseInt(prompt("Me passe a Largura: "));
+    var comprimento = parseInt(prompt("Me passe o comprimennto: "));
+    var area_total = calc_area(largura,comprimento);
+
+    function calc_area(p1,p2) {
+        
+        resp = p1*p2;
+
+        return resp;
+
+    }
+
+    alert("A area do terreno é de " + area_total + ("M²...")); */
+
+    /*var idade_1 = parseInt(prompt("Digite a idade 01: "));
+    let nome_1 = prompt("Digite o nome 01: ");
+    var idade_2 = parseInt(prompt("Digite a idade 02: "));
+    let nome_2 = prompt("Digite o nome 02: ");
+    var idade_3 = parseInt(prompt("Digite a idade 03: "));
+    let nome_3 = prompt("Digite o nome 03: ");
+
+    if (idade_1 >= idade_2 && idade_1 >= idade_3) {
+
+        alert("A idade maior foi... " + idade_1 + " Do " + nome_1);
+        
+    }else if(idade_2 >= idade_1 && idade_2 >= idade_3){
+
+        alert("A idade maior foi... " + idade_2 + " Do " + nome_2);
+
+    }else{
+
+        alert("A idade maior foi... " + idade_3 + " Do " + nome_3);
+
+    }*/
+
+
+    do {
+
+
+            let peso = parseFloat(prompt("Informe o peso: "));
+            let altura = parseFloat(prompt("Informe a altura: "));
+            var nome = prompt("Nome do paciente: ");
+            var cont = true;
+            var imc = calc_imc(peso, altura);
+
+
+
+            function calc_imc(p1, p2) {
+
+
+                resp = (p1 / Math.pow(p2, 2));
+
+                return resp;
+            }
+
+            if (imc > 40.00) {
+                alert(nome + " obesidade grau 3 " + imc);
+            } else if (imc >= 35.0 && imc <= 39.9) {
+                alert(nome + " obesidade grau 2 " + imc);
+            } else if (imc >= 30.0 && imc <= 34.9) {
+                alert(nome + " obesidade grau 1 " + imc);
+            } else if (imc >= 25.0 && imc <= 29.9) {
+                alert(nome + " sobre-peso " + imc);
+            } else if (imc >= 18.6 && imc <= 24.9) {
+                alert(nome + " peso normal " + imc);
+            } else if (imc <= 18.5) {
+                alert(nome + " abaixo do normal " + imc);
+            }
+
+            var continua = prompt("Deseja contiinuar? ");
+
+            if (continua == "n") {
+                cont = false;
+            }
+
+    } while (cont == true);
+
+
+</script>
+
+</body>
+</html>
